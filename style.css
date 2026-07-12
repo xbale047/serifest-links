@@ -136,3 +136,31 @@ margin-top:25px;
 font-size:12px;
 
 }
+
+.fade-out{
+
+    animation: fadeOut 0.5s forwards;
+
+}
+
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+
+    to{
+
+        opacity:0;
+
+        transform:scale(0.95);
+
+    }
+
+}
