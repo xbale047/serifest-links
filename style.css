@@ -1,12 +1,17 @@
 * {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
 }
 
 body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #2b0000, #800000, #3d0000);
+    background: linear-gradient(
+        135deg,
+        #240000,
+        #800000,
+        #3b0000
+    );
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,68 +19,63 @@ body {
 }
 
 
-/* Efek tirai */
-body::before,
-body::after {
+/* Efek cahaya panggung */
+body::before {
     content: "";
     position: fixed;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        #3a0000,
-        #a00000,
-        #3a0000
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(
+        circle,
+        rgba(255,215,0,0.25),
+        transparent 70%
     );
     z-index: -1;
 }
 
-body::before {
-    left: 0;
-}
 
-body::after {
-    right: 0;
-}
-
-
-/* Card utama */
 .container {
     width: 90%;
     max-width: 450px;
     text-align: center;
-    background: rgba(0,0,0,0.35);
     padding: 35px 25px;
+    background: rgba(0,0,0,0.35);
     border-radius: 25px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,215,0,0.3);
-    box-shadow: 0 0 30px rgba(255,215,0,0.25);
-    animation: muncul 1s ease;
+    border: 1px solid rgba(255,215,0,0.4);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
 
 /* Welcome */
 .welcome h2 {
+    margin: 0;
     color: #ffd700;
-    font-size: 28px;
-    text-shadow: 0 0 15px rgba(255,215,0,0.8);
+    font-size: 26px;
 }
 
 .welcome p {
+    margin-top: 10px;
     font-size: 14px;
+    opacity: 0.9;
 }
 
 
 /* Logo */
 .logo {
-    width: 150px;
-    margin: 20px auto;
+    width: 160px;
+    max-width: 80%;
+    margin: 25px auto 15px;
+    display: block;
+    object-fit: contain;
 }
 
 
 /* Judul */
 h1 {
+    margin: 10px 0;
     color: #ffd700;
     font-size: 32px;
 }
@@ -83,8 +83,9 @@ h1 {
 
 /* Subtitle */
 .subtitle {
+    font-size: 14px;
     font-style: italic;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 
@@ -97,14 +98,11 @@ h1 {
 
 
 .btn {
-    background: linear-gradient(
-        45deg,
-        #ffd700,
-        #fff1a8
-    );
-    color: #600000;
+    display: block;
     padding: 14px;
-    border-radius: 12px;
+    border-radius: 15px;
+    background: #ffd700;
+    color: #5b0000;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -112,8 +110,8 @@ h1 {
 
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px #ffd700;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(255,215,0,0.5);
 }
 
 
@@ -121,18 +119,5 @@ h1 {
 footer {
     margin-top: 30px;
     font-size: 12px;
-}
-
-
-/* Animasi */
-@keyframes muncul {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    opacity: 0.8;
 }
