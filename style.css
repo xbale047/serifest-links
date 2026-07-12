@@ -1,71 +1,88 @@
+/* =========================
+   SERIFEST 2026
+========================= */
+
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-
 body{
-
-    margin:0;
 
     min-height:100vh;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
-    background:linear-gradient(
-        135deg,
-        #300000,
-        #800000
-    );
+    position:relative;
+
+    overflow:hidden;
 
     color:white;
 
+    background:
+    linear-gradient(
+        135deg,
+        rgba(70,0,0,0.85),
+        rgba(110,15,15,0.75)
+    );
+
 }
 
+/* Blur Overlay */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,255,255,.06),
+    transparent 60%);
+
+    backdrop-filter:blur(6px);
+
+    z-index:0;
+
+}
+
+/* Card */
 
 .card{
 
+    position:relative;
+
+    z-index:2;
+
     width:90%;
+    max-width:430px;
 
-    max-width:420px;
-
-    padding:40px 25px;
-
-    background:rgba(0,0,0,0.45);
-
-    border:2px solid #ffd700;
-
-    border-radius:25px;
+    padding:35px 28px;
 
     text-align:center;
 
-}
+    border-radius:24px;
 
+    background:
+    rgba(255,255,255,.08);
 
+    border:1px solid rgba(255,255,255,.18);
 
-h1,h2{
-
-    color:#ffd700;
-
-}
-
-
-
-p{
-
-    line-height:1.6;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
 
 }
 
-
+/* Logo */
 
 .logo{
 
-    width:160px;
+    width:150px;
 
     display:block;
 
@@ -73,19 +90,39 @@ p{
 
 }
 
+/* Judul */
 
+.welcome-title{
+
+    color:#FFD54F;
+
+    font-size:30px;
+
+    margin-bottom:10px;
+
+}
+
+.event-title{
+
+    color:#FFD54F;
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
 
 .theme{
 
-    font-style:italic;
+    line-height:1.8;
 
-    font-size:14px;
+    opacity:.95;
 
     margin-bottom:30px;
 
 }
 
-
+/* Tombol */
 
 .buttons{
 
@@ -97,77 +134,99 @@ p{
 
 }
 
-
-
 .btn{
 
     display:block;
 
+    text-decoration:none;
+
+    background:#FFD54F;
+
+    color:#5A0000;
+
     padding:15px;
 
-    background:#ffd700;
-
-    color:#600000;
-
-    border-radius:15px;
-
-    text-decoration:none;
+    border-radius:14px;
 
     font-weight:bold;
 
-    transition:0.3s;
+    transition:.3s;
 
 }
 
-
-
 .btn:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* Contact */
+
+.contact{
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+}
+
+.contact h3{
+
+    color:#FFD54F;
+
+    margin-bottom:15px;
+
+}
+
+.wa-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    padding:13px 24px;
+
+    background:#25D366;
+
+    color:white;
+
+    border-radius:14px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.wa-btn:hover{
 
     transform:scale(1.05);
 
 }
 
-
-
-.contact{
-
-    margin-top:30px;
-
-    padding-top:20px;
-
-    border-top:1px solid rgba(255,255,255,0.3);
-
-}
-
-
-
-.contact h3{
-
-    color:#ffd700;
-
-}
-
-
+/* Footer */
 
 footer{
 
-    margin-top:25px;
+    margin-top:30px;
 
-    font-size:12px;
+    font-size:13px;
+
+    opacity:.8;
 
 }
 
-
+/* Animasi */
 
 .fade{
 
-    animation:fadeIn 0.8s ease;
+    animation:fadeUp .8s ease;
 
 }
 
-
-
-@keyframes fadeIn{
+@keyframes fadeUp{
 
     from{
 
@@ -177,7 +236,6 @@ footer{
 
     }
 
-
     to{
 
         opacity:1;
@@ -185,5 +243,35 @@ footer{
         transform:translateY(0);
 
     }
+
+}
+
+/* HP kecil */
+
+@media(max-width:480px){
+
+.logo{
+
+    width:125px;
+
+}
+
+.event-title{
+
+    font-size:28px;
+
+}
+
+.welcome-title{
+
+    font-size:26px;
+
+}
+
+.card{
+
+    padding:28px 22px;
+
+}
 
 }
