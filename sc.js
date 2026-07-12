@@ -1,11 +1,14 @@
-function openSerifest(){
+const button = document.getElementById("start");
 
-    const welcome = document.getElementById("welcome");
-    const main = document.getElementById("main");
+const welcome = document.getElementById("welcome");
+
+const content = document.getElementById("content");
 
 
-    welcome.style.display="none";
+button.onclick = function(){
 
-    main.style.display="block";
+    welcome.style.display = "none";
 
-}
+    content.classList.remove("hidden");
+
+};
