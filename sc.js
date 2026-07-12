@@ -1,14 +1,30 @@
-const button = document.getElementById("start");
+// ==========================
+// SERIFEST Website v2.0
+// ==========================
 
-const welcome = document.getElementById("welcome");
+window.addEventListener("load", () => {
 
-const content = document.getElementById("content");
+    // Ambil elemen tirai
+    const curtain = document.getElementById("curtain");
 
+    // Setelah animasi selesai, hilangkan tirai
+    if (curtain) {
+        setTimeout(() => {
+            curtain.style.display = "none";
+        }, 2100);
+    }
 
-button.onclick = function(){
+    // Efek muncul untuk card
+    const card = document.querySelector(".card");
 
-    welcome.style.display = "none";
+    if (card) {
+        card.style.opacity = "0";
 
-    content.classList.remove("hidden");
+        setTimeout(() => {
+            card.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, 500);
+    }
 
-};
+});
