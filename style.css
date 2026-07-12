@@ -16,8 +16,7 @@ body{
 
     align-items:center;
 
-    background:
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         #300000,
         #800000
@@ -26,7 +25,6 @@ body{
     color:white;
 
 }
-
 
 
 .card{
@@ -39,9 +37,9 @@ body{
 
     background:rgba(0,0,0,0.45);
 
-    border-radius:25px;
-
     border:2px solid #ffd700;
+
+    border-radius:25px;
 
     text-align:center;
 
@@ -77,33 +75,13 @@ p{
 
 
 
-.btn{
+.theme{
 
-    display:inline-block;
+    font-style:italic;
 
-    margin-top:25px;
+    font-size:14px;
 
-    padding:15px 30px;
-
-    background:#ffd700;
-
-    color:#600000;
-
-    border-radius:15px;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-}
-
-
-
-.btn:hover{
-
-    opacity:0.8;
-
-    transform:scale(1.05);
+    margin-bottom:30px;
 
 }
 
@@ -117,15 +95,55 @@ p{
 
     gap:15px;
 
-    margin-top:25px;
+}
+
+
+
+.btn{
+
+    display:block;
+
+    padding:15px;
+
+    background:#ffd700;
+
+    color:#600000;
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s;
 
 }
 
 
 
-.buttons .btn{
+.btn:hover{
 
-    margin-top:0;
+    transform:scale(1.05);
+
+}
+
+
+
+.contact{
+
+    margin-top:30px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,0.3);
+
+}
+
+
+
+.contact h3{
+
+    color:#ffd700;
 
 }
 
@@ -141,24 +159,21 @@ footer{
 
 
 
-/* TRANSISI HALAMAN */
+.fade{
 
-.page-enter{
-
-    animation: masuk 0.8s ease;
+    animation:fadeIn 0.8s ease;
 
 }
 
 
 
-@keyframes masuk{
-
+@keyframes fadeIn{
 
     from{
 
         opacity:0;
 
-        transform:translateY(30px);
+        transform:translateY(25px);
 
     }
 
@@ -170,6 +185,5 @@ footer{
         transform:translateY(0);
 
     }
-
 
 }
