@@ -2,40 +2,59 @@
 <html lang="id">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Welcome | SERIFEST 2026</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body>
+<body class="welcome-page">
 
-<div class="overlay"></div>
+    <!-- Background Partikel -->
+    <div id="particles"></div>
 
-<div class="card welcome-card fade">
+    <!-- Tirai -->
+    <div id="curtain">
 
-    <h1 class="welcome-title">
-        🎭 Welcome To
-    </h1>
+        <div class="curtain left"></div>
 
-    <h2 class="event-title">
-        SERIFEST 2026
-    </h2>
+        <div class="curtain right"></div>
 
-    <p class="theme">
-        "Theater of Qur'ani :<br>
-        United by Faith, Driven by Light"
-    </p>
+    </div>
 
-    <a href="home.html" class="btn">
-        ✨ Masuk SERIFEST
-    </a>
+    <!-- Welcome Card -->
+    <div class="card welcome-card fade" id="welcomeCard">
 
-</div>
+        <img src="serifest.png"
+             alt="Logo SERIFEST"
+             class="logo">
+
+        <h1 class="welcome-title">
+            🎭 Welcome To
+        </h1>
+
+        <h2 class="event-title">
+            SERIFEST 2026
+        </h2>
+
+        <p class="theme">
+            Theater of Qur'ani:<br>
+            United by Faith, Driven by Light
+        </p>
+
+        <a href="home.html" class="btn enter-btn">
+            ✨ Masuk SERIFEST
+        </a>
+
+    </div>
+
+    <!-- Efek Cahaya -->
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+
+    <script src="script.js"></script>
 
 </body>
 
