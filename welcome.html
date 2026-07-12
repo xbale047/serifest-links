@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Welcome SERIFEST 2026</title>
+<title>SERIFEST 2026 | Theater of Qur'ani</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,52 +16,48 @@
 <body>
 
 
-<div class="card" id="welcomeCard">
+<div class="card page-enter">
 
 
-<h1>🎭 Welcome To</h1>
+<img src="serifest.png" class="logo" alt="Logo SERIFEST">
 
 
-<h2>SERIFEST 2026</h2>
+<h1>SERIFEST 2026</h1>
 
 
 <p>
-Theater of Qur'ani : United by Faith, Driven by Light
+"Theater of Qur'ani : United by Faith, Driven by Light"
 </p>
 
 
-<a href="home.html" class="btn" onclick="transitionPage(event)">
-Masuk SERIFEST ✨
+
+<div class="buttons">
+
+
+<a href="https://ipb.link/registrasi-serifest" class="btn">
+📝 Pendaftaran
+</a>
+
+
+<a href="https://ipb.link/guidebook-serifest" class="btn">
+📖 Guidebook
+</a>
+
+
+<a href="https://ipb.link/twibbon-serifest" class="btn">
+🎨 Twibbon
 </a>
 
 
 </div>
 
 
-
-<script>
-
-function transitionPage(event){
-
-    event.preventDefault();
+<footer>
+© 2026 SERIFEST
+</footer>
 
 
-    const card = document.getElementById("welcomeCard");
-
-
-    card.classList.add("fade-out");
-
-
-    setTimeout(function(){
-
-        window.location.href = "home.html";
-
-    },500);
-
-
-}
-
-</script>
+</div>
 
 
 </body>
