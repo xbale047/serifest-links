@@ -86,3 +86,74 @@ footer {
     font-size: 12px;
     opacity: 0.8;
 }
+
+.container {
+    animation: muncul 1s ease;
+}
+
+
+.logo {
+    animation: turun 1.2s ease;
+}
+
+
+.welcome {
+    animation: munculAtas 1s ease;
+}
+
+
+.btn {
+    animation: naik 0.8s ease;
+}
+
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes munculAtas {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes turun {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes naik {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
